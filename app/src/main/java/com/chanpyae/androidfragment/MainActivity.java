@@ -132,6 +132,15 @@ public class MainActivity extends AppCompatActivity
                     .commit();
 
         }
+        else if (id == R.id.nav_frame) {
+            // Handle the Send Fragment
+            TestFramLayoutFragment frameFragment = new TestFramLayoutFragment();
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.content_frame,frameFragment)
+                    .addToBackStack(null)
+                    .commit();
+
+        }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
